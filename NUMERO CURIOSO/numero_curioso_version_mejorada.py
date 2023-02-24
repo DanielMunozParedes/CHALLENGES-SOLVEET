@@ -28,18 +28,15 @@ def multiplo (numero):
         if(cont == 12):
           return "es"
 
-def diferencia(lista,pos,flag ,increment = 0,boolean = False):
-  
-  if(increment == 0): increment == 0
-  if(boolean == False): boolean = False
+def diferencia(lista,pos,flag ,increment = 0):
+
   for nume,valor in enumerate(lista):
     if pos != nume:
       if (lista[pos] == valor):
-        flag = flag + 1
-  
+        flag = flag + 1  
   increment = increment + 1
   if(increment < 5 ):
-    flag = diferencia(lista,increment,flag,increment,boolean)
+    flag = diferencia(lista,increment,flag,increment)
   
   return flag
 
